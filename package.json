@@ -1,0 +1,16 @@
+{
+  "name": "financial-survival-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Financial Survival Toolkit frontend with Spring Boot backend",
+  "scripts": {
+    "frontend": "http-server . -p 5500 -c-1",
+    "backend": "cd backend && ./mvnw spring-boot:run",
+    "dev": "concurrently -k -n FRONTEND,BACKEND \"npm:frontend\" \"npm:backend\"",
+    "start": "npm run dev"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "http-server": "^14.1.1"
+  }
+}
